@@ -174,12 +174,9 @@ public class JGrid extends javax.swing.JFrame {
     }//GEN-LAST:event_bt_deleteActionPerformed
 
     private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
-        // TODO add your handling code here:
-        int i = jTable1.getSelectedRow();
-        
-        _posisi = i;
-        tf_nama.setText(model.getValueAt(i, 0).toString());
-        tf_kelas.setText(model.getValueAt(i, 1).toString());       
+        _posisi = jTable1.getSelectedRow();
+        tf_nama.setText(model.getValueAt(_posisi, 0).toString());
+        tf_kelas.setText(model.getValueAt(_posisi, 1).toString());       
     }//GEN-LAST:event_jTable1MouseClicked
 
     void kosong(){
